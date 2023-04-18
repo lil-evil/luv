@@ -414,5 +414,5 @@ ENDMACRO()
 
 MACRO(LUA_ADD_EXECUTABLE luajit_target)
   LUAJIT_add_custom_commands(${luajit_target} ${ARGN})
-  add_executable(${luajit_target} ${target_srcs})
+  add_library(${luajit_target} SHARED ${target_srcs})
 ENDMACRO(LUA_ADD_EXECUTABLE luajit_target)
